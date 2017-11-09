@@ -521,7 +521,7 @@ section .panel-body .table-hover>tbody>tr:hover {
 @media (min-width: 768px ) {
 }
 @media screen and (max-width: 767px) {
-    ul.side-nav li:last-child {
+    ul.side-nav li:last-child .kaleidoscope {
         display: none;
     }
     header {
