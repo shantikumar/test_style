@@ -535,7 +535,7 @@ section .panel-body .table-hover>tbody>tr:hover {
         transition: 0.5s;
     }
     .side-nav>li>a {
-        font-size: 14px;
+        font-size: 16px;
     }
     .transform {
         transform: translateX(0px);
