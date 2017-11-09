@@ -15,7 +15,7 @@
         
     </head>
     <body>
-      <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+      <a href="javascript:void(0)" class="closebtn hidden" id="closeNav">&times;</a>
         <header>
             <div class="top-nav">
                <div class="visible-xs-block visible-sm-block">
@@ -28,50 +28,43 @@
             
                 <nav class="search-nav">
                    <div class="container-fluid">
-                       <form class="nav-form search-nav-left hidden-xs" role="search">
+                       <form class="nav-form search-nav-left hidden-xs" role="search" id="globalSearch">
                            <div class="form-group">
+                              <img src="images/icon_search.svg" width="24px" height="24px">
                                <input type="search" name="search" class="form-control" placeholder="Search for projects">
                            </div>
                        </form>
-                       <ul class="search-nav-right">
-                          <li>
-                            <div class="visible-xs-block visible-sm-block">
-                                <a href="" class="icon-search"><img src="images/icon_search.svg" width="24px" height="24px"></a>
+                       <div class="dropdown active search-nav-left">
+                           <a href="#" class="dropdown-toggle" id="drop-notification" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <img src="images/icon_notifications.svg"> <span class="badge top">4</span> </a>
+                           <ul class="dropdown-menu drop-medium list-drop-group" aria-labelledby="dLabel">
+                              <li class="heading">Notifications</li>
+                               <li>
+                                   Evaluations for <strong>November 2017</strong> must be completed by 20/10/2017.
+                                   <span class="badge transparent">Today, 2 hrs ago</span>
+                                </li>
+                                <li>
+                                   Cras justo <strong>odioCras</strong> justo odioCras justo odioCras justo odioCras justo odio
+                                   <span class="badge transparent">Mon, 06/11/2017</span>
+                                </li>
+                               <li>
+                                   Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
+                                   <span class="badge transparent">Wed, 25/10/2017</span>
+                                </li>
+                               <li>
+                                   Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
+                                   <span class="badge transparent">Fri, 20/10/2017</span>
+                                </li>
+                                <li><a href="#">Clear all</a></li>
+                           </ul>
+                       </div>
+                    <div class="visible-xs-block visible-sm-block">
+                        <a href="" class="icon-search" id="showGlobalSearch"><img src="images/icon_search.svg" width="24px" height="24px"></a>
+                    </div>
+                       <div class="visible-md-block visible-lg-block search-nav-right">
+                            <div class="search-nav-brand text-right">
+                                <img src="images/atkins-snc-lavalin-logo.svg" with="100%" height="100%" alt="Atkins member of the SNC-Lavalin Group">
                             </div>
-                          </li>
-                           <li>
-                               <div class="dropdown active">
-                                   <a href="#" class="dropdown-toggle" id="drop-notification" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <img src="images/icon_notifications.svg"> <span class="badge top">4</span> </a>
-                                   <ul class="dropdown-menu drop-medium list-drop-group" aria-labelledby="dLabel">
-                                      <li class="heading">Notifications</li>
-                                       <li>
-                                           Evaluations for <strong>November 2017</strong> must be completed by 20/10/2017.
-                                           <span class="badge transparent">Today, 2 hrs ago</span>
-                                        </li>
-                                        <li>
-                                           Cras justo <strong>odioCras</strong> justo odioCras justo odioCras justo odioCras justo odio
-                                           <span class="badge transparent">Mon, 06/11/2017</span>
-                                        </li>
-                                       <li>
-                                           Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
-                                           <span class="badge transparent">Wed, 25/10/2017</span>
-                                        </li>
-                                       <li>
-                                           Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
-                                           <span class="badge transparent">Fri, 20/10/2017</span>
-                                        </li>
-                                        <li><a href="#">Clear all</a></li>
-                                   </ul>
-                               </div>
-                           </li>
-                           <li>
-                               <div class="visible-md-block visible-lg-block">
-                                    <div class="search-nav-brand text-right">
-                                        <img src="images/atkins-snc-lavalin-logo.svg" with="100%" height="100%" alt="Atkins member of the SNC-Lavalin Group">
-                                    </div>
-                               </div>
-                           </li>
-                       </ul>
+                       </div>
                        
                        
                    </div>
@@ -805,23 +798,26 @@
 //                  $('#sideNav').addClass('transform');
 //                });
 //                
-                  $('#closeNav').hide();
+                  //$('#closeNav').hide();
                 
                 $( "#nav-button" ).click(function() {
-                  $('#sideNav').addClass('open');
-                  $('body').addClass('open-bg');
-                  $('#closeNav').show();
+                    $('#sideNav').addClass('open');
+                    $('body').addClass('open-bg');
+                    $('#closeNav').removeClass('hidden');
                     $('header').hide();
-                    event.stopPropagation();
                 });
                 $( "#closeNav" ).click(function() {
-                  $('#sideNav').removeClass('open');
-                  $('body').removeClass('open-bg');
-                    $(this).hide();
+                    $('#sideNav').removeClass('open');
+                    $('body').removeClass('open-bg');
+                    $('#closeNav').addClass('hidden');
                     $('header').show();
-                    event.stopPropagation();
                 });
                 
+                $( "#showGlobalSearch" ).click(function(e) {
+                    $('#globalSearch').removeClass('hidden-xs');
+                     e.preventDefault();
+                });
+
                 
             });
         </script>
