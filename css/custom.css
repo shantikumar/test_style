@@ -317,77 +317,77 @@ ul.side-nav li:last-child {
     margin-right: 10px;
 }
 .side-nav li a .icon-dashboard {
-    background: url(../../images/svg/dashboard_default.svg) center no-repeat;
+    background: url(../images/svg/dashboard_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-dashboard,
 .side-nav li.active a .icon-dashboard {
-    background: url(../../images/svg/dashboard_active.svg) center no-repeat;
+    background: url(../images/svg/dashboard_active.svg) center no-repeat;
 }
 
 
 .side-nav li a .icon-project {
-    background: url(../../images/svg/project_default.svg) center no-repeat;
+    background: url(../images/svg/project_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-project,
 .side-nav li.active a .icon-project {
-    background: url(../../images/svg/project_active.svg) center no-repeat;
+    background: url(../images/svg/project_active.svg) center no-repeat;
 }
 
 
 .side-nav li a .icon-users {
-    background: url(../../images/svg/user_default.svg) center no-repeat;
+    background: url(../images/svg/user_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-users,
 .side-nav li.active a .icon-users {
-    background: url(../../images/svg/user_active.svg) center no-repeat;
+    background: url(../images/svg/user_active.svg) center no-repeat;
 }
 
 .side-nav li a .icon-faq {
-    background: url(../../images/svg/faq_default.svg) center no-repeat;
+    background: url(../images/svg/faq_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-faq,
 .side-nav li.active a .icon-faq {
-    background: url(../../images/svg/faq_active.svg) center no-repeat;
+    background: url(../images/svg/faq_active.svg) center no-repeat;
 }
 
 .side-nav li a .icon-help {
-    background: url(../../images/svg/help_default.svg) center no-repeat;
+    background: url(../images/svg/help_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-help,
 .side-nav li.active a .icon-help {
-    background: url(../../images/svg/help_active.svg) center no-repeat;
+    background: url(../images/svg/help_active.svg) center no-repeat;
 }
 
 .side-nav li a .icon-yammer {
-    background: url(../../images/svg/yammer_default.svg) center no-repeat;
+    background: url(../images/svg/yammer_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-yammer,
 .side-nav li.active a .icon-yammer {
-    background: url(../../images/svg/yammer_active.svg) center no-repeat;
+    background: url(../images/svg/yammer_active.svg) center no-repeat;
 }
 
 .side-nav li a .icon-design {
-    background: url(../../images/svg/design_default.svg) center no-repeat;
+    background: url(../images/svg/design_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-design,
 .side-nav li.active a .icon-design {
-    background: url(../../images/svg/design_active.svg) center no-repeat;
+    background: url(../images/svg/design_active.svg) center no-repeat;
 }
 
 .side-nav li a .icon-bms {
-    background: url(../../images/svg/bms_default.svg) center no-repeat;
+    background: url(../images/svg/bms_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-bms,
 .side-nav li.active a .icon-bms {
-    background: url(../../images/svg/bms_active.svg) center no-repeat;
+    background: url(../images/svg/bms_active.svg) center no-repeat;
 }
 
 .side-nav li a .icon-disclaimer {
-    background: url(../../images/svg/disclaimer_default.svg) center no-repeat;
+    background: url(../images/svg/disclaimer_default.svg) center no-repeat;
 }
 .side-nav li a:hover .icon-disclaimer,
 .side-nav li.active a .icon-disclaimer {
-    background: url(../../images/svg/disclaimer_active.svg) center no-repeat;
+    background: url(../images/svg/disclaimer_active.svg) center no-repeat;
 }
 
 
