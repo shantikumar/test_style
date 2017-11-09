@@ -33,11 +33,16 @@ ul:not(.browser-default) {
     float: left; 
 }
 
-
+.search-nav .dropdown>a {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
 .search>label>input.form-control {
     border-radius: 100px;
     padding-left: 40px;
     font-weight: normal;
+    width: 400px;
 }
 .search>label {
     position: relative;
@@ -107,13 +112,17 @@ ul:not(.browser-default) {
 .search-nav .dropdown {
     margin-top: 10px;
 }
-.search-nav .badge.top {
+.search-nav .dropdown a .badge {
+    display: none;
+}
+.search-nav .dropdown.active a .badge.top {
     position: absolute;
     top: -6px;
     right: -8px;
     background-color: brown;
     border-radius: 100px;
     padding: 5px 8px;
+    display: block;
 }
 
 .search-nav-brand {
@@ -260,6 +269,7 @@ ul.side-nav li:last-child {
     padding: 10px 0;
     display: block;
 }
+
 /*
 .side-nav>li>a>img {
     margin-right: 6px;
@@ -519,9 +529,22 @@ section .panel-body .table-hover>tbody>tr:hover {
         top: 0;
         z-index: 99;
     }
-    .search-nav .dropdown-menu {
-        left: -358px;
+    .navbar-toggle {
+        margin: 0;
+        padding: 12px;
     }
+    .search-nav .dropdown {
+        position: absolute;
+        top: 3px;
+        right: 14px;
+    }
+    .search-nav .dropdown-menu {
+        left: -268px;
+    }
+    .search-nav .icon-search {
+
+    }
+/*
     .nav-form .form-group .form-control:focus {
         text-indent: 0;
         width: 400px;
@@ -536,6 +559,7 @@ section .panel-body .table-hover>tbody>tr:hover {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+*/
     
     .nav-form .form-group .form-control {
         border-radius: 100px;
@@ -553,6 +577,31 @@ section .panel-body .table-hover>tbody>tr:hover {
         -webkit-transform: translateX(-105%);
         transform: translateX(-105%);
     }
+    .transform {
+        transform: translateX(0px);
+    }
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        z-index: 999;
+    }
+    .open-bg {
+      background-color: rgba(0,0,0,0.4);
+      overflow: hidden;
+        z-index: 999;
+    }
+    .open {
+        transform: translateX(0px);
+    }
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    
+    
     .search>label {
         width: 100%;
     }
@@ -573,6 +622,12 @@ section .panel-body .table-hover>tbody>tr:hover {
     main .panel .panel-body>.list-inline>li .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
         width: 100%;
     }
+    .body-section-header h1 {
+        font-size: 28px;
+    }
+    .body-section-header .btn-primary {
+        float: left;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -588,6 +643,7 @@ section .panel-body .table-hover>tbody>tr:hover {
     .search-nav {
         margin-top: 15px;
     }
+    
     .search-nav .dropdown .drop-medium {
         min-width: 350px;
     }
