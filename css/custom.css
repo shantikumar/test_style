@@ -545,9 +545,10 @@ section .panel-body .table-hover>tbody>tr:hover {
         top: 0;
         right: 0;
         width: 100%;
-        font-size: 36px;
-        margin-left: 50px;
         z-index: 999;
+        color: #FFF;
+        height: calc(100% + 60px);
+        height: -moz-calc(100%);
     }
     .open-bg {
       background-color: rgba(0,0,0,0.4);
