@@ -543,7 +543,8 @@ section .panel-body .table-hover>tbody>tr:hover {
     .closebtn {
         position: absolute;
         top: 0;
-        right: 25px;
+        right: 0;
+        width: 100%;
         font-size: 36px;
         margin-left: 50px;
         z-index: 999;
