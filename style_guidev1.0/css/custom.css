@@ -89,6 +89,7 @@ ul:not(.browser-default) {
     position: relative;
     margin-right: 20px;
 }
+/*
 .search-nav-left .form-group::before {
     font-family: FontAwesome;
     position: absolute;
@@ -99,6 +100,7 @@ ul:not(.browser-default) {
     color: #999999;
     font-weight: normal;
 }
+*/
 
 
 
@@ -114,6 +116,9 @@ ul:not(.browser-default) {
 }
 .search-nav .dropdown a .badge {
     display: none;
+}
+.search-nav .dropdown.active a {
+    position: relative;
 }
 .search-nav .dropdown.active a .badge.top {
     position: absolute;
@@ -570,40 +575,46 @@ section .panel-body .table-hover>tbody>tr:hover {
         margin: 0;
         padding: 12px;
     }
-    .search-nav .dropdown {
-        position: absolute;
-        top: 3px;
-        right: 14px;
+    .search-nav .dropdown.active {
+        float: right;
     }
     .search-nav .dropdown-menu {
         left: -268px;
     }
     .search-nav .icon-search {
-
+        margin-top: 8px;
+        margin-right: 10px;
+        padding: 6px 12px;
+        line-height: 1.42857143;
+        display: inline-block;
+        float: right;
     }
-/*
-    .nav-form .form-group .form-control:focus {
-        text-indent: 0;
-        width: 400px;
-        padding-left: 15px;
-        position: absolute;
-        z-index: 1;
-        top: -9px;
-        height: 49px;
-        left: -112px;
+    .nav-form .form-group .form-control {
+        padding: 8px 8px 8px 50px;
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        display: inline-block;
         -webkit-transition: width 0.2s cubic-bezier(0, 1.2, 0.4, 1.1);
         transition: width 0.2s cubic-bezier(0, 1.2, 0.4, 1.1);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-*/
+    .nav-form {
+        position: absolute;
+        z-index: 777;
+        left: 0;
+        width: 100%;
+    }
     
-    .nav-form .form-group .form-control {
-        border-radius: 100px;
-        padding: 8px 8px 8px 50px;
-        min-width: 100%;
-        min-height: 36px;
-        margin-top: 10px;
+    .nav-form .form-group {
+        margin: 0;
+        position: relative;
+    }
+    .nav-form .form-group img {
+        position: absolute;
+        left: 14px;
+        top: 14px;
     }
     .search-nav-left .form-group::before {
         top: 7px;
@@ -653,7 +664,12 @@ section .panel-body .table-hover>tbody>tr:hover {
     .search-nav {
         margin-top: 15px;
     }
-    
+    .nav-form .form-group img {
+        position: absolute;
+        left: 14px;
+        top: 11px;
+        opacity: 0.5;
+    }
     .search-nav .dropdown .drop-medium {
         min-width: 350px;
     }
