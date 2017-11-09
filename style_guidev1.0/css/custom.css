@@ -628,6 +628,11 @@ section .panel-body .table-hover>tbody>tr:hover {
     .body-section-header .btn-primary {
         float: left;
     }
+    ul.side-nav li>.kaleidoscope img {
+        height: 100%;
+        bottom: 0;
+        position: absolute;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
