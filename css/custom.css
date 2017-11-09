@@ -534,6 +534,9 @@ section .panel-body .table-hover>tbody>tr:hover {
         transform: translateX(-105%);
         transition: 0.5s;
     }
+    .side-nav>li>a {
+        font-size: 14px;
+    }
     .transform {
         transform: translateX(0px);
     }
@@ -647,6 +650,11 @@ section .panel-body .table-hover>tbody>tr:hover {
     }
     .body-section-header .btn-primary {
         float: left;
+    }
+    
+    
+    .breadcrumb {
+        padding-left: 0;
     }
     
 }
