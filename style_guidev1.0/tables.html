@@ -15,58 +15,71 @@
         
     </head>
     <body>
+      <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
         <header>
             <div class="top-nav">
                <div class="visible-xs-block visible-sm-block">
-                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                   <button type="button" class="navbar-toggle collapsed" id="nav-button">
                        <span class="sr-only">Toggle navigation</span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
+                       <img src="images/icon_menu.svg" width="24px" height="24px">
                    </button>
                    <a class="navbar-brand" href="#">PHI</a>
                </div>
             
                 <nav class="search-nav">
                    <div class="container-fluid">
-                       <form class="nav-form search-nav-left" role="search">
+                       <form class="nav-form search-nav-left hidden-xs" role="search">
                            <div class="form-group">
                                <input type="search" name="search" class="form-control" placeholder="Search for projects">
                            </div>
                        </form>
-                       <div class="dropdown search-nav-left">
-                           <a href="#" class="dropdown-toggle" id="drop-notification" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-bell-o fa-2x"></i> <span class="badge top">4</span> </a>
-                           <ul class="dropdown-menu drop-medium list-drop-group" aria-labelledby="dLabel">
-                              <li class="heading">Notifications</li>
-                               <li>
-                                   Evaluations for <strong>November 2017</strong> must be completed by 20/10/2017.
-                                   <span class="badge transparent">Today, 2 hrs ago</span>
-                                </li>
-                                <li>
-                                   Cras justo <strong>odioCras</strong> justo odioCras justo odioCras justo odioCras justo odio
-                                   <span class="badge transparent">Mon, 06/11/2017</span>
-                                </li>
-                               <li>
-                                   Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
-                                   <span class="badge transparent">Wed, 25/10/2017</span>
-                                </li>
-                               <li>
-                                   Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
-                                   <span class="badge transparent">Fri, 20/10/2017</span>
-                                </li>
-                                <li><a href="#">Clear all</a></li>
-                           </ul>
-                       </div>
-                       <div class="search-nav-right visible-md-block visible-lg-block">
-                            <div class="search-nav-brand text-right">
-                                <img src="images/Dark_blue_Atkins_logo.svg" with="100%" height="100%" alt="Atkins member of the SNC-Lavalin Group">
+                       <ul class="search-nav-right">
+                          <li>
+                            <div class="visible-xs-block visible-sm-block">
+                                <a href="" class="icon-search"><img src="images/icon_search.svg" width="24px" height="24px"></a>
                             </div>
-                       </div>
+                          </li>
+                           <li>
+                               <div class="dropdown active">
+                                   <a href="#" class="dropdown-toggle" id="drop-notification" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <img src="images/icon_notifications.svg"> <span class="badge top">4</span> </a>
+                                   <ul class="dropdown-menu drop-medium list-drop-group" aria-labelledby="dLabel">
+                                      <li class="heading">Notifications</li>
+                                       <li>
+                                           Evaluations for <strong>November 2017</strong> must be completed by 20/10/2017.
+                                           <span class="badge transparent">Today, 2 hrs ago</span>
+                                        </li>
+                                        <li>
+                                           Cras justo <strong>odioCras</strong> justo odioCras justo odioCras justo odioCras justo odio
+                                           <span class="badge transparent">Mon, 06/11/2017</span>
+                                        </li>
+                                       <li>
+                                           Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
+                                           <span class="badge transparent">Wed, 25/10/2017</span>
+                                        </li>
+                                       <li>
+                                           Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odio
+                                           <span class="badge transparent">Fri, 20/10/2017</span>
+                                        </li>
+                                        <li><a href="#">Clear all</a></li>
+                                   </ul>
+                               </div>
+                           </li>
+                           <li>
+                               <div class="visible-md-block visible-lg-block">
+                                    <div class="search-nav-brand text-right">
+                                        <img src="images/atkins-snc-lavalin-logo.svg" with="100%" height="100%" alt="Atkins member of the SNC-Lavalin Group">
+                                    </div>
+                               </div>
+                           </li>
+                       </ul>
+                       
+                       
                    </div>
               </nav>
           </div>
       </header>
-        <ul class="side-nav fixed">
+       
+        <ul class="side-nav fixed" id="sideNav">
             <li>
                 <div class="user-view">
                     <div class="background">
@@ -99,19 +112,24 @@
                 </div>
             </li>
         </ul>
+        
+        <!--
         <main>
             <div class="container-fluid">
                 <section class="body-section-header">
                     <h1>User administration</h1>
                     <div class="row">
-                        <div class="col-xs-6 col-md-9 col-lg-9">
+                        <div class="col-xs-12 col-md-9 col-lg-9">
                             <ol class="breadcrumb">
                               <li><a href="#">Home</a></li>
                               <li class="active">Users</li>
                             </ol>
                         </div>
-                        <div class="col-xs-6 col-md-3 col-lg-3">
-                            <button type="button" class="btn btn-primary pull-right effect">Add new user</button>
+                        <div class="col-xs-12 col-md-3 col-lg-3">
+                            <button type="button" class="btn btn-primary pull-right effect">
+                                <span class="hidden-xs visible-md-block visible-lg-block">Add new user</span>
+                                <span class="visible-xs"><img src="images/icon_plus.svg" width="48px" height="48px"></span>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -160,9 +178,9 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <!--<span class="avatar pull-left">
+                                            <span class="avatar pull-left">
                                                 <img class="circle" src="images/default_avatar.png">
-                                            </span>-->
+                                            </span>
                                             <h4>Tiger Nixon</h4>
                                             <span class="center-block text-muted">Tiger.Nixon@atkinsglobal.com</span>
                                         </td>
@@ -170,18 +188,10 @@
                                             <h4>Civil &#40;Highway &amp; Track &#41;</h4>
                                             <span class="center-block text-muted">GDC Management</span>
                                         </td>
-                                        <td>
-                                            <select class="selectpicker show-menu-arrow" multiple title="Select role">
-                                              <option selected>Site admin</option>
-                                              <option selected>Executive</option>
-                                              <option>Project manager</option>
-                                              <option>Stakeholder</option>
-                                              <option>Originator</option>
-                                              <option>Checker</option>
-                                              <option>Reviewer</option>
-                                              <option>Authorizer</option>
-                                            </select>
+                                         <td>
+                                            <h4>Site admin, Executive</h4>
                                         </td>
+
                                         <td>
                                             <a href=""><img src="images/edit_icon.png"></a>
                                             <a href=""><img src="images/delete_icon.png"></a>
@@ -189,9 +199,9 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <!--<span class="avatar pull-left">
+                                            <span class="avatar pull-left">
                                                 <img class="circle" src="images/default_avatar.png">
-                                            </span>-->
+                                            </span>
                                             <h4>Garrett Winters</h4>
                                             <span class="center-block text-muted">Garrett.Winters@atkinsglobal.com</span>
                                         </td>
@@ -758,7 +768,7 @@
                 </section>
             </div>
         </main>
-        
+        -->
     
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -781,7 +791,37 @@
                 $('#example_length').remove();
                 
                 $('th').unbind('click.sorting');
-            } );
+                
+//                function withAnimate() {
+//                  $("#with-jquery").animate({
+//                    transform: "translateX(0px)",
+//                  }, {
+//                    duration: 3000, 
+//                    easing: "linear"
+//                  } ); 
+//                }
+
+//                $("#nav-button").on('click', function(){
+//                  $('#sideNav').addClass('transform');
+//                });
+//                
+                  $('#closeNav').hide();
+                
+                $( "#nav-button" ).click(function() {
+                  $('#sideNav').addClass('open');
+                  $('body').addClass('open-bg');
+                  $('#closeNav').show();
+                    $('header').hide();
+                });
+                $( "#closeNav" ).click(function() {
+                  $('#sideNav').removeClass('open');
+                  $('body').removeClass('open-bg');
+                    $(this).hide();
+                    $('header').show();
+                });
+                
+                
+            });
         </script>
     </body>
 </html>
